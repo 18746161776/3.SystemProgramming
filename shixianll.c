@@ -16,7 +16,7 @@ void showinfo(char *name) {
     if (stat(name, &st) <0) {
         perror("stat");
     }
-    printf("%s\t%d\n", name, st.st_nlink);
+    printf("%s\t%ld\n", name, st.st_nlink);
 }
     int main(int argc,char *argv[]){
     DIR *dir = opendir(argv[1]);
